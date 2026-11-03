@@ -1,0 +1,378 @@
+/* ==========================================
+   RESET & ALGEMENE STIJLEN
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Montserrat', sans-serif;
+    color: #1b4965;
+    background-color: #cae9ff;
+}
+
+/* ==========================================
+   NAVIGATIE
+   ========================================== */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(27, 73, 101, 0.95);
+    padding: 15px 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 30px;
+}
+
+nav a {
+    color: #bee9e8;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #cae9ff;
+}
+
+/* ==========================================
+   HERO SECTIE (Geïnspireerd op afbeelding)
+   ========================================== */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: repeating-linear-gradient(
+        90deg,
+        #cae9ff,
+        #cae9ff 80px,
+        #bee9e8 80px,
+        #bee9e8 160px
+    );
+    overflow: hidden;
+    text-align: center;
+}
+
+/* Grote PORTFOLIO titel */
+.title-container {
+    position: relative;
+    display: inline-block;
+}
+
+.hero h1 {
+    font-size: 8rem;
+    font-weight: 900;
+    color: #1b4965;
+    letter-spacing: -2px;
+    line-height: 1;
+    text-transform: lowercase;
+}
+
+.script-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-5deg);
+    font-family: 'Great Vibes', cursive;
+    font-size: 6rem;
+    color: #62b6cb;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #5fa8d3;
+    margin-top: 15px;
+}
+
+/* Mappen op de achtergrond */
+.folder {
+    position: absolute;
+    width: 110px;
+    height: 80px;
+    background-color: #bee9e8;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.folder-tab {
+    position: absolute;
+    top: -12px;
+    left: 10px;
+    width: 45px;
+    height: 15px;
+    background-color: #bee9e8;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.folder span {
+    font-family: monospace;
+    color: #1b4965;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.folder-1 { top: 18%; left: 15%; transform: rotate(-8deg); }
+.folder-2 { top: 22%; right: 15%; transform: rotate(10deg); }
+.folder-3 { bottom: 15%; right: 22%; transform: rotate(-5deg); }
+
+/* ==========================================
+   ALGEMENE SECTIE STIJLEN
+   ========================================== */
+section {
+    padding: 100px 20px 80px;
+    max-width: 1100px;
+    margin: 0 auto;
+    scroll-margin-top: 70px;
+}
+
+#contact {
+    scroll-margin-top: 85px;
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 0.8rem;
+    }
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #1b4965;
+    margin-bottom: 30px;
+    text-transform: lowercase;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #1b4965;
+    margin-bottom: 10px;
+}
+
+/* ==========================================
+   OVER MIJ SECTIE
+   ========================================== */
+.about-section {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    align-items: center;
+    padding-left: 10px;
+    background-color: #bee9e8;
+    border-radius: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.about-text {
+    flex: 1;
+    max-width: 500px;
+}
+
+.about-text p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    color: #1b4965;
+}
+
+.about-photo {
+    flex: 0 1 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.about-photo img {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 700px) {
+    .about-section {
+        flex-direction: column;
+    }
+}
+
+/* ==========================================
+   VAARDIGHEDEN SECTIE
+   ========================================== */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.skill-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    border-left: 6px solid #62b6cb;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+/* ==========================================
+   PROJECTEN SECTIE
+   ========================================== */
+#projecten {
+    padding-top: 30px;
+    scroll-margin-top: 60px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+@media (max-width: 600px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.project-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card p {
+    margin: 15px 0 25px;
+    line-height: 1.5;
+}
+
+.project-preview {
+    display: block;
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 10px;
+    transition: opacity 0.3s ease;
+}
+
+.project-preview:hover {
+    opacity: 0.8;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #5fa8d3;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #bee9e8;
+    color: #1b4965;
+}
+
+/* ==========================================
+   CONTACT SECTIE
+   ========================================== */
+.contact-section {
+    text-align: center;
+}
+
+.contact-box {
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 600px;
+    margin: 30px auto 0;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #cae9ff;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #5fa8d3;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    background-color: #1b4965;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #bee9e8;
+    color: #1b4965;
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #1b4965;
+    color: #bee9e8;
+    font-size: 0.9rem;
+}
